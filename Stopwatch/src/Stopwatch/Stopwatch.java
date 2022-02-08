@@ -182,11 +182,11 @@ public class Stopwatch {
         x.add(mylabel, SwingConstants.CENTER);
         boolean loop = true;
         while (loop == true) {
-            loooop(reset, x);
+            loop(reset, x);
         }
     }
 
-    public static void loooop(JButton reset, JFrame x) throws InterruptedException {
+    public static void loop(JButton reset, JFrame x) throws InterruptedException {
         alarmtim = (LocalTime.of(0, 0, 0).plusSeconds(i).plusMinutes(j).plusHours(k));
         if ((alarmtim) == (LocalTime.of(0, 0, 0))) {
             invalid = true;
@@ -217,5 +217,6 @@ public class Stopwatch {
         } else {
             myalarm.setText("Alarm: " + dtf2.format(alarmtim));
         }
+
     }
 }
